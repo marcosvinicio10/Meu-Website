@@ -8,6 +8,28 @@
     padding: 1rem 2rem;
 }
 
+/* Overlay para o menu mobile */
+.header::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.header.menu-active::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -73,6 +95,61 @@
     gap: 1.5rem;
 }
 
+/* Theme Toggle Button */
+.container {
+    position: relative;
+}
+
+.label {
+    height: 40px;
+    width: 80px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+        inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+        inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.4s;
+}
+
+.label:hover {
+    transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+#checkbox:checked ~ .label:hover {
+    transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked ~ .label::before {
+    left: 45px;
+}
+
+.label::before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #000000;
+    background-image: linear-gradient(
+        130deg,
+        #757272 10%,
+        #ffffff 11%,
+        #726f6f 62%
+    );
+    left: 5px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
+        10px 10px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -90,48 +167,88 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 1rem;
+        padding: 0 20px;
     }
 
     .navbar {
-        padding: 1rem;
-        border-radius: 15px;
+        padding: 15px 20px;
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 80px;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        padding: 1rem 0;
+        background: var(--bg-primary);
+        padding: 20px;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0 0 15px 15px;
+        gap: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     .hamburger {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1001;
+        background: none;
+        border: none;
+        padding: 0;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
+    .hamburger .line {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--text-primary);
+        transition: all 0.3s ease-in-out;
+        border-radius: 3px;
     }
 
-    .hamburger.active span:nth-child(2) {
+    .hamburger.active .line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+    .hamburger.active .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .header.menu-active .navbar {
+        background: var(--bg-primary);
+        border-color: var(--border-color);
+    }
+
+    .header.menu-active .hamburger .line {
+        background-color: var(--text-primary);
+    }
+
+    /* Garantir que o botão hamburger seja visível no mobile */
+    .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: flex;
     }
 } 
