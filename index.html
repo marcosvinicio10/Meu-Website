@@ -13,10 +13,10 @@
     <div id="header-container"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
-            <h1>Olá, eu sou <span class="highlight">Marcos Vincio</span></h1>
-            <p class="subtitle">Software Developer</p>
+            <h1>Olá, eu sou <span class="highlight">Marcos Vinicio</span></h1>
+            <p class="subtitle">Desenvolvedor Full Stack</p>
             <div class="availability">
                 <span class="availability-text">Disponível para novos trabalhos</span>
                 <span class="availability-dot"></span>
@@ -53,85 +53,120 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <h2>Minhas Habilidades</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-react"></i>
-                <h3>React</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-node-js"></i>
-                <h3>Node.js</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-database"></i>
-                <h3>SQL</h3>
+    <section id="habilidades" class="section">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica e acessível de páginas web.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Estilização moderna com Flexbox, Grid e animações.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Desenvolvimento de aplicações web interativas.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Construção de interfaces modernas e reutilizáveis.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Desenvolvimento de aplicações e automações.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>C++</h3>
+                    <p>Programação de sistemas e algoritmos.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-hashtag"></i>
+                    <h3>C#</h3>
+                    <p>Desenvolvimento de aplicações desktop e jogos.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Unity</h3>
+                    <p>Desenvolvimento de jogos e experiências interativas.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projetos" class="projects">
-        <h2>Meus Projetos</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
-                <div class="project-info">
-                    <h3>Nome do Projeto</h3>
-                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn small">Demo</a>
-                        <a href="#" class="btn small">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Adicione mais project-cards conforme necessário -->
+        <h2>Projetos</h2>
+        <div class="projects-grid" id="projects-container">
+            <!-- Projetos serão carregados dinamicamente -->
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Entre em Contato</h2>
-        <div class="contact-content">
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" required>
-                    <label for="name">Nome</label>
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Entre em contato comigo através das minhas redes sociais:</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/5511999999999" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://www.instagram.com/seu_usuario" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://github.com/seu_usuario" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/seu_usuario" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" required></textarea>
-                    <label for="message">Mensagem</label>
-                </div>
-                <button type="submit" class="btn primary">Enviar Mensagem</button>
-            </form>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Marcos Vinicio</h3>
+                <p>Desenvolvedor Full Stack</p>
+                <div class="footer-email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:marcosvinicio.dev@gmail.com">marcosvinicio.dev@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/#sobre">Sobre</a>
+                <a href="/#habilidades">Habilidades</a>
+                <a href="/#projetos">Projetos</a>
+                <a href="/#contato">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/5511999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/seu_usuario" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/seu_usuario" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/seu_usuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Marcos Vinicio. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="/src/components/header.js"></script>
@@ -139,5 +174,6 @@
     <script src="controllers/navigation.js"></script>
     <script src="controllers/form.js"></script>
     <script src="controllers/animations.js"></script>
+    <script src="controllers/projects.js"></script>
 </body>
 </html> 
