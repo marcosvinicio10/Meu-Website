@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Vinicio | Home</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Olá, eu sou <span class="highlight">Seu Nome</span></h1>
+            <p class="subtitle">Desenvolvedor Full Stack</p>
+            <div class="cta-buttons">
+                <a href="#projetos" class="btn primary">Ver Projetos</a>
+                <a href="#contato" class="btn secondary">Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <h2>Sobre Mim</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes. Com experiência em desenvolvimento web, mobile e desktop, busco sempre entregar produtos de alta qualidade.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3>2+</h3>
+                    <p>Anos de Experiência</p>
+                </div>
+                <div class="stat">
+                    <h3>20+</h3>
+                    <p>Projetos Concluídos</p>
+                </div>
+                <div class="stat">
+                    <h3>15+</h3>
+                    <p>Clientes Satisfeitos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Minhas Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="projects">
+        <h2>Meus Projetos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+                <div class="project-info">
+                    <h3>Nome do Projeto</h3>
+                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
+                    <div class="project-links">
+                        <a href="#" class="btn small">Demo</a>
+                        <a href="#" class="btn small">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Adicione mais project-cards conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Entre em Contato</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Nome</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+                <button type="submit" class="btn primary">Enviar Mensagem</button>
+            </form>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/src/components/header.js"></script>
+    <script src="controllers/theme.js"></script>
+    <script src="controllers/navigation.js"></script>
+    <script src="controllers/form.js"></script>
+    <script src="controllers/animations.js"></script>
+</body>
+</html> 
