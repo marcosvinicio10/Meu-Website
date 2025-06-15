@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header Container -->
     <div id="header-container"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
         <div class="hero-content">
             <h1>Olá, eu sou <span class="highlight">Marcos Vinicio</span></h1>
             <p class="subtitle">Sofware Developer</p>
@@ -26,7 +27,7 @@
                 <a href="#contato" class="btn secondary">Contato</a>
             </div>
         </div>
-        <div class="hero-code">
+        <div class="hero-code" data-aos="fade-left" data-aos-delay="300">
             <div class="code-card">
                 <div class="code-header">
                     <div class="code-dots">
@@ -56,13 +57,13 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up">
         <h2 class="section-title">Sobre Mim</h2>
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-right">
                 <p>Sou um desenvolvedor apaixonado por criar soluções inovadoras e interfaces intuitivas. Com experiência em desenvolvimento web e mobile, busco sempre entregar produtos de alta qualidade que atendam às necessidades dos usuários.</p>
             </div>
-            <div class="about-stats">
+            <div class="about-stats" data-aos="fade-left">
                 <div class="stat">
                     <h3>2+</h3>
                     <p>Anos de Experiência</p>
@@ -79,7 +80,7 @@
         </div>
         <div class="about-cards">
             <div class="cards-container">
-                <div class="e-card playing">
+                <div class="e-card playing" data-aos="fade-up" data-aos-delay="100">
                     <div class="image"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
@@ -92,7 +93,7 @@
                         <div class="name">Faça seu projeto com o criador da Melhor Solução Ambiental do Rio de Janeiro pela NASA em 2024</div>
                     </div>
                 </div>
-                <div class="e-card playing">
+                <div class="e-card playing" data-aos="fade-up" data-aos-delay="200">
                     <div class="image"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
@@ -105,7 +106,7 @@
                         <div class="name">Construa a sua solução ou sistema e melhore o desenpenho da sua marca</div>
                     </div>
                 </div>
-                <div class="e-card playing">
+                <div class="e-card playing" data-aos="fade-up" data-aos-delay="300">
                     <div class="image"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
@@ -123,46 +124,46 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="habilidades" class="section">
+    <section id="habilidades" class="section" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Habilidades</h2>
             <div class="skills-grid">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fab fa-html5"></i>
                     <h3>HTML5</h3>
                     <p>Estruturação semântica e acessível de páginas web.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fab fa-css3-alt"></i>
                     <h3>CSS3</h3>
                     <p>Estilização moderna com Flexbox, Grid e animações.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fab fa-js"></i>
                     <h3>JavaScript</h3>
                     <p>Desenvolvimento de aplicações web interativas.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
                     <i class="fab fa-react"></i>
                     <h3>React</h3>
                     <p>Construção de interfaces modernas e reutilizáveis.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
                     <i class="fab fa-python"></i>
                     <h3>Python</h3>
                     <p>Desenvolvimento de aplicações e automações.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
                     <i class="fas fa-code"></i>
                     <h3>C++</h3>
                     <p>Programação de sistemas e algoritmos.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
                     <i class="fas fa-hashtag"></i>
                     <h3>C#</h3>
                     <p>Desenvolvimento de aplicações desktop e jogos.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="zoom-in" data-aos-delay="800">
                     <i class="fas fa-gamepad"></i>
                     <h3>Unity</h3>
                     <p>Desenvolvimento de jogos e experiências interativas.</p>
@@ -172,22 +173,22 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projetos" class="projects">
+    <section id="projetos" class="projects" data-aos="fade-up">
         <h2>Projetos</h2>
         <div class="projects-grid" id="projects-container">
             <!-- Projetos serão carregados dinamicamente -->
         </div>
-        <div class="projects-more">
+        <div class="projects-more" data-aos="fade-up" data-aos-delay="300">
             <a href="https://marcosvinicio.itch.io" target="_blank" class="btn">Ver mais projetos</a>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="section">
+    <section id="contato" class="section" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Contato</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
                     <p>Entre em contato comigo através das minhas redes sociais:</p>
                     <div class="social-links">
                         <a href="https://wa.me/5511999999999" target="_blank" class="social-link">
@@ -213,7 +214,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="footer-content">
             <div class="footer-info">
                 <h3>Marcos Vinicio</h3>
@@ -242,11 +243,20 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/src/components/header.js"></script>
     <script src="controllers/theme.js"></script>
     <script src="controllers/navigation.js"></script>
     <script src="controllers/form.js"></script>
     <script src="controllers/animations.js"></script>
     <script src="controllers/projects.js"></script>
+    <script>
+        // Inicializa AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html> 

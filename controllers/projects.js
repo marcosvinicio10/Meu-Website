@@ -16,6 +16,8 @@ async function loadProjects() {
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
+    card.setAttribute('data-aos', 'fade-up');
+    card.setAttribute('data-aos-delay', Math.random() * 300); // Delay aleatório para cada card
     
     card.innerHTML = `
         <div class="project-image">
