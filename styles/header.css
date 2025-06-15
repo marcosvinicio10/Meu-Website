@@ -155,14 +155,18 @@
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 .hamburger span {
     width: 25px;
     height: 2px;
-    background: var(--text-primary);
-    transition: all 0.3s ease;
+    background: var(--text-color);
+    transition: var(--transition);
 }
 
 .header-logo h1 {
@@ -266,4 +270,26 @@
     .header-logo h1 {
         font-size: 1.2rem;
     }
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-radius: 0 0 0 20px;
+}
+
+.mobile-menu.active {
+    right: 0;
 } 

@@ -986,7 +986,7 @@ section h2 {
 }
 
 .contact-info p {
-    color: #ccc;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 400;
