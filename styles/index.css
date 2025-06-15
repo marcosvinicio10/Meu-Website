@@ -74,6 +74,7 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -95,6 +96,10 @@ body {
         rgba(var(--bg-primary-rgb), 0.8) 100%
     );
     z-index: -1;
+}
+
+.hero-content {
+    margin-bottom: 3rem;
 }
 
 .hero-content h1 {
@@ -129,20 +134,158 @@ body {
 .availability-dot {
     width: 8px;
     height: 8px;
-    background-color: var(--accent-primary);
+    background: #4CAF50;
     border-radius: 50%;
-    animation: blink 2s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+    animation: pulse 2s infinite;
 }
 
 .cta-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
+}
+
+.hero-code {
+    max-width: 600px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.code-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.code-header {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.code-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff5f56;
+}
+
+.code-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.code-dots span:nth-child(3) {
+    background: #27c93f;
+}
+
+.code-title {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.code-content {
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.code-content pre {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+.code-content code {
+    display: block;
+}
+
+/* Syntax Highlighting */
+.code-content .keyword {
+    color: #ff79c6;
+}
+
+.code-content .variable {
+    color: #bd93f9;
+}
+
+.code-content .property {
+    color: #8be9fd;
+}
+
+.code-content .string {
+    color: #f1fa8c;
+}
+
+.code-content .comment {
+    color: #6272a4;
+    font-style: italic;
+}
+
+.motivational-quote {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+.motivational-quote p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-code {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .code-content pre {
+        font-size: 0.75rem;
+    }
+
+    .motivational-quote p {
+        font-size: 1rem;
+    }
 }
 
 /* Responsividade */
