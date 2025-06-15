@@ -4,7 +4,7 @@
             "id": 1,
             "title": "Portfolio Pessoal",
             "description": "Um portfolio moderno e responsivo desenvolvido com HTML, CSS e JavaScript. Inclui seções para apresentação, habilidades, projetos e contato, com design minimalista e animações suaves.",
-            "image": "/assets/images/projects/portfolio.jpg",
+            "image": "/assets/1.png",
             "technologies": ["HTML", "CSS", "JavaScript"],
             "link": "https://seu-portfolio.com"
         },
