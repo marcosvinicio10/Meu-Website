@@ -2,43 +2,35 @@
     "projects": [
         {
             "id": 1,
-            "title": "Portfolio Pessoal",
-            "description": "Um portfolio moderno e responsivo desenvolvido com HTML, CSS e JavaScript. Inclui seções para apresentação, habilidades, projetos e contato, com design minimalista e animações suaves.",
+            "title": "Girassol GS",
+            "description": "Site de E-Comerce para a Girassol GS, com todas as funcionalidades necessarias como: carrinho, compras, contato e entre outras",
             "image": "/assets/1.png",
-            "technologies": ["HTML", "CSS", "JavaScript"],
-            "link": "https://seu-portfolio.com"
+            "technologies": ["React","HTML", "CSS", "JavaScript"],
+            "link": "https://girassolgs.site"
         },
         {
             "id": 2,
-            "title": "Sistema de Gestão",
-            "description": "Sistema completo de gestão empresarial com módulos de vendas, estoque e relatórios. Interface intuitiva e dashboard personalizado para visualização de métricas importantes.",
-            "image": "/assets/images/projects/gestao.jpg",
-            "technologies": ["React", "Node.js", "MongoDB"],
-            "link": "https://sistema-gestao.com"
+            "title": "Earth Defenders",
+            "description": "Jogo educacional,reconhecido como Melhor Solução Ambiental do Rio de Janeiro pela NASA, feito para ensinar a crianças conceitos ambientais e socias enquanto elas se divertem com a jogabilidade",
+            "image": "/assets/2.png",
+            "technologies": ["Construct"],
+            "link": "https://marcosvinicio.itch.io/earth-defenders"
         },
         {
             "id": 3,
-            "title": "E-commerce",
-            "description": "Plataforma de e-commerce com carrinho de compras, sistema de pagamento e área do cliente. Design responsivo e otimizado para conversão.",
-            "image": "/assets/images/projects/ecommerce.jpg",
-            "technologies": ["React", "Node.js", "PostgreSQL"],
-            "link": "https://ecommerce-exemplo.com"
+            "title": "HyperSpeed",
+            "description": "Simulador de F1 3D usando a Unity Engine",
+            "image": "/assets/3.png",
+            "technologies": ["Unity"],
+            "link": "https://marcosvinicio.itch.io/hyper-speed"
         },
         {
             "id": 4,
-            "title": "Rede Social",
-            "description": "Rede social com funcionalidades de posts, comentários, curtidas e mensagens privadas. Interface moderna e sistema de notificações em tempo real.",
-            "image": "/assets/images/projects/rede-social.jpg",
-            "technologies": ["React", "Firebase", "Material-UI"],
-            "link": "https://rede-social-exemplo.com"
-        },
-        {
-            "id": 5,
-            "title": "App de Tarefas",
-            "description": "Aplicativo de gerenciamento de tarefas com drag-and-drop, categorias, prioridades e lembretes. Sincronização em tempo real entre dispositivos.",
-            "image": "/assets/images/projects/tarefas.jpg",
-            "technologies": ["React", "Redux", "Firebase"],
-            "link": "https://app-tarefas.com"
+            "title": "Code ONE",
+            "description": "Site oficial do curso Code ONE, curso focado em ensinar programação",
+            "image": "/assets/4.png",
+            "technologies": ["HTML", "CSS"],
+            "link": ""
         }
     ]
 }
