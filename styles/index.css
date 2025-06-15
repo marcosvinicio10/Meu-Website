@@ -1,5 +1,6 @@
 /* Importa as variáveis de tema */
 @import 'themes.css';
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap');
 
 /* Reset e estilos base */
 * {
@@ -99,6 +100,8 @@ body {
 }
 
 .hero-content {
+    max-width: 600px;
+    z-index: 1;
     margin-bottom: 3rem;
 }
 
@@ -106,6 +109,21 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
+}
+
+.hero-content p strong {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
 }
 
 .highlight {
@@ -196,8 +214,24 @@ body {
 }
 
 .code-content {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #f8f8f2;
+    background: rgba(40, 42, 54, 1);
+    border-radius: 0 0 8px 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+}
+
+@media (min-width: 768px) {
+    .code-content {
+        padding: 3rem 1.5rem;
+    }
 }
 
 .code-content pre {
@@ -234,6 +268,95 @@ body {
     font-style: italic;
 }
 
+
+.e-card {
+    margin: 100px auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    position: relative;
+    width: 240px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 540px;
+    height: 700px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -50%;
+    margin-top: -70%;
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    text-transform: lowercase;
+  }
+  
+  .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+  
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+  
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 .motivational-quote {
     text-align: center;
     padding: 1.5rem;
@@ -521,8 +644,16 @@ section h2 {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
 }
 
 .skill-card, .project-card {
@@ -610,9 +741,11 @@ section h2 {
 }
 
 .skill-card h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
 }
 
 .skill-card p {
@@ -699,16 +832,18 @@ section h2 {
 }
 
 .project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--text-primary);
-    font-size: 1.25rem;
-    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
 }
 
 .project-info p {
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0;
-    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
 }
 
 .project-tech {
@@ -867,10 +1002,19 @@ section h2 {
     margin-bottom: 2rem;
 }
 
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
 .contact-info p {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
 }
 
 .social-links {
@@ -1330,4 +1474,101 @@ body::before {
 .projects-header p {
     color: var(--text-secondary);
     font-size: 1.1rem;
+}
+
+:root {
+    --primary-color: #00ff88;
+    --secondary-color: #00ccff;
+    --text-color: #ffffff;
+    --bg-color: #0a0a0a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --gradient: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        padding-top: 4rem;
+    }
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
+
+.project-card .btn {
+    background: var(--text-primary);
+    color: #000000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+[data-theme="light"] .project-card .btn {
+    color: #ffffff;
+}
+
+.project-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.header-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .header-logo h1 {
+        font-size: 1.2rem;
+    }
+}
+
+.about-cards {
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 } 
