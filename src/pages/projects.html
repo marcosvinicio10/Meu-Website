@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Marcos Vinicio</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" href="/assets/favicon.jpg" type="image/jpeg">
+    <script src="https://kit.fontawesome.com/2b1e1e7e2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <section class="projects-page">
+            <div class="projects-header" data-aos="fade-up">
+                <h1>Projetos</h1>
+                <p>Confira alguns dos meus principais projetos desenvolvidos recentemente.</p>
+            </div>
+            <div class="projects-grid" id="projects-container">
+                <!-- Cards de projetos serão carregados dinamicamente -->
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/src/components/header.js"></script>
+    <script src="/controllers/projects.js"></script>
+    <script type="module">
+      import { loadFooter } from '/src/components/footer.js';
+      loadFooter();
+    </script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    </script>
+</body>
+</html>

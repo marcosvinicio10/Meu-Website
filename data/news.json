@@ -1,0 +1,28 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "titulo": "Palestrante pelo IMPA",
+      "data": "06 de Setembro, 2024",
+      "imagem": "/assets/n1.jpg",
+      "resumo": "Fui convidado pela AfroGames e IMPA para fazer parte da palestra 'O Poder dos Jogos' no Festival Nacional da Matematica",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "titulo": "Melhor Solução Ambiental do RJ",
+      "data": "6 de Outubro, 2024",
+      "imagem": "/assets/n2.jpg",
+      "resumo": "Nos dias 5 e 6 de Outubro eu e minha equipe participamos do Nasa Space Apps e fomos reconhecidos com a Melhor Solução Ambiental do Rio de Janeiro",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "titulo": "Formatura AfroGames",
+      "data": "30 de Novembro, 2024",
+      "imagem": "/assets/n3.jpg",
+      "resumo": "Dia 30 de Novembro eu completei mais um ciclo, a formatura no curso de Desenvolvimento de Jogos na AfroGames",
+      "link": "#"
+    }
+  ]
+} 

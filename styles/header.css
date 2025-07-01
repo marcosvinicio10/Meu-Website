@@ -271,6 +271,9 @@
     .header-logo h1 {
         font-size: 1.2rem;
     }
+    .logo a {
+        font-size: 1.3rem;
+    }
 }
 
 .mobile-menu {

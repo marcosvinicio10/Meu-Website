@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias | Marcos Vinicio</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" href="/assets/favicon.jpg" type="image/jpeg">
+    <script src="https://kit.fontawesome.com/2b1e1e7e2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <section class="news" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title">Últimas Notícias</h2>
+                <div class="news-grid" id="news-container">
+                    <!-- Notícias serão carregadas dinamicamente -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/src/components/header.js"></script>
+    <script type="module">
+      import { loadFooter } from '/src/components/footer.js';
+      loadFooter(document.getElementById('footer-container'));
+      // Sincroniza o tema do footer com o tema global
+      const observer = new MutationObserver(() => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const footer = document.querySelector('.footer');
+        if (footer) {
+          footer.setAttribute('data-theme', theme);
+        }
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      // Inicializa o tema do footer
+      window.addEventListener('DOMContentLoaded', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const footer = document.querySelector('.footer');
+        if (footer) {
+          footer.setAttribute('data-theme', theme);
+        }
+      });
+    </script>
+    <script>
+      // Carregar notícias dinamicamente
+      async function loadNews() {
+        try {
+          const response = await fetch('/data/news.json');
+          const data = await response.json();
+          const newsContainer = document.getElementById('news-container');
+          data.news.forEach((item, idx) => {
+            const article = document.createElement('article');
+            article.className = 'news-card';
+            article.setAttribute('data-aos', 'fade-up');
+            article.setAttribute('data-aos-delay', 100 + idx * 100);
+            article.innerHTML = `
+              <div class="news-image">
+                <img src="${item.imagem}" alt="${item.titulo}">
+              </div>
+              <div class="news-content">
+                <span class="news-date">${item.data}</span>
+                <h3>${item.titulo}</h3>
+                <p>${item.resumo}</p>
+                <a href="${item.link}" class="read-more">Ler mais <i class="fas fa-arrow-right"></i></a>
+              </div>
+            `;
+            newsContainer.appendChild(article);
+          });
+        } catch (error) {
+          console.error('Erro ao carregar notícias:', error);
+        }
+      }
+      document.addEventListener('DOMContentLoaded', loadNews);
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    </script>
+</body>
+</html>

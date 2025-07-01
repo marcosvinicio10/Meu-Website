@@ -607,6 +607,17 @@ body {
     }
 }
 
+.btn.details-btn {
+    background: #fff0c2;
+    color: #b8860b;
+    border: 2px solid #ffe082;
+}
+
+.btn.details-btn:hover {
+    background: #ffe082;
+    color: #7c5a00;
+}
+
 /* Sections */
 section {
     position: relative;
@@ -1469,7 +1480,7 @@ body::before {
 
 /* Projects Page */
 .projects-page {
-    padding: 2rem;
+    padding: 7rem 2rem 2rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -1793,5 +1804,47 @@ body::before {
 
     .news-content p {
         font-size: 0.9rem;
+    }
+}
+
+/* Hero Mockups */
+.hero-mockups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.hero-mockup-img {
+    width: 100%;
+    max-width: 820px;
+    height: auto;
+    border-radius: 18px;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.hero-mockup-img:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .hero-mockup-img {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-mockup-img {
+        max-width: 99vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-page {
+        padding-top: 4.5rem;
     }
 }

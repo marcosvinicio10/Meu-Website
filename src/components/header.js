@@ -104,4 +104,9 @@ function initHeader() {
 }
 
 // Inicializa o header quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', initHeader); 
+document.addEventListener('DOMContentLoaded', () => {
+    // Garante que o tema salvo seja aplicado antes de renderizar o header
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    initHeader();
+}); 

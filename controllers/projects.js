@@ -25,14 +25,17 @@ function createProjectCard(project) {
         </div>
         <div class="project-info">
             <h3>${project.title}</h3>
-            <p>${project.description}</p>
+            <p>${project.resumo}</p>
             <div class="project-tech">
                 ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
             </div>
-            <a href="${project.link}" class="btn primary" target="_blank">
-                Ver Projeto
-                <i class="fas fa-external-link-alt"></i>
-            </a>
+            <div class="project-links" style="display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1rem;">
+                <a href="${project.link}" class="btn primary" target="_blank">
+                    Abrir projeto
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <button class="btn secondary details-btn" type="button">Detalhes</button>
+            </div>
         </div>
     `;
     

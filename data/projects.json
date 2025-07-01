@@ -4,6 +4,8 @@
             "id": 1,
             "title": "Girassol GS",
             "description": "Site de E-Comerce para a Girassol GS, com todas as funcionalidades necessarias como: carrinho, compras, contato e entre outras",
+            "resumo": "E-commerce moderno para uma loja de produtos naturais.",
+            "categoria": "site",
             "image": "/assets/1.png",
             "technologies": ["React","HTML", "CSS", "JavaScript"],
             "link": "https://girassolgs.site"
@@ -12,6 +14,8 @@
             "id": 2,
             "title": "Earth Defenders",
             "description": "Jogo educacional,reconhecido como Melhor Solução Ambiental do Rio de Janeiro pela NASA, feito para ensinar a crianças conceitos ambientais e socias enquanto elas se divertem com a jogabilidade",
+            "resumo": "Jogo educativo premiado pela NASA para crianças.",
+            "categoria": "Jogo",
             "image": "/assets/2.png",
             "technologies": ["Construct"],
             "link": "https://marcosvinicio.itch.io/earth-defenders"
@@ -20,6 +24,8 @@
             "id": 3,
             "title": "HyperSpeed",
             "description": "Simulador de F1 3D usando a Unity Engine",
+            "resumo": "Simulador de corrida 3D desenvolvido em Unity.",
+            "categoria": "Jogo",
             "image": "/assets/3.png",
             "technologies": ["Unity"],
             "link": "https://marcosvinicio.itch.io/hyper-speed"
@@ -28,6 +34,8 @@
             "id": 4,
             "title": "Code ONE",
             "description": "Site oficial do curso Code ONE, curso focado em ensinar programação",
+            "resumo": "Landing page para curso de programação.",
+            "categoria": "site",
             "image": "/assets/4.png",
             "technologies": ["HTML", "CSS"],
             "link": ""

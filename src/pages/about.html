@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Marcos Vinicio</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" href="/public/favicon.jpg" type="image/jpeg">
+    <script src="https://kit.fontawesome.com/2b1e1e7e2e.js" crossorigin="anonymous"></script>
+    <style>
+      .about-section { padding: 4rem 0 2rem 0; }
+      .about-photo {
+        width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12); margin-bottom: 1.5rem;
+      }
+      .about-intro { text-align: center; max-width: 700px; margin: 0 auto; }
+      .experiences-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin: 2.5rem 0 0 0;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .exp-card {
+        background: rgba(255,255,255,0.07);
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        padding: 2rem 2rem 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid rgba(0,0,0,0.04);
+        transition: box-shadow 0.2s, transform 0.2s;
+        position: relative;
+      }
+      .exp-card:hover {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        transform: translateY(-4px) scale(1.01);
+      }
+      .exp-icon {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        color: var(--accent-color, #00ff88);
+      }
+      .exp-role {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.3rem;
+      }
+      .exp-company {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.2rem;
+      }
+      .exp-period {
+        font-size: 0.98rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.7rem;
+      }
+      .exp-desc {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.2rem;
+      }
+      /* Prêmios & Conquistas */
+      .awards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2.2rem;
+        margin-bottom: 1.5rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .award-card {
+        background: rgba(255,255,255,0.09);
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid rgba(0,0,0,0.04);
+        transition: box-shadow 0.2s, transform 0.2s;
+        min-height: 140px;
+      }
+      .award-card:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+        transform: translateY(-2px) scale(1.01);
+      }
+      .award-title {
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: var(--accent-color, #00ff88);
+        margin-bottom: 0.5rem;
+      }
+      .award-desc {
+        font-size: 0.98rem;
+        color: var(--text-secondary);
+      }
+      /* Certificados */
+      .certificates-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        margin-top: 2.2rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        list-style: none;
+      }
+      .certificate-item {
+        background: rgba(255,255,255,0.09);
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        padding: 1.1rem 1.3rem;
+        font-size: 1rem;
+        color: var(--text-primary);
+        border: 1px solid rgba(0,0,0,0.04);
+        flex: 1 1 220px;
+        min-width: 180px;
+        max-width: 320px;
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .awards-grid, .certificates-list { max-width: 100%; }
+      }
+      @media (max-width: 600px) {
+        .about-section { padding: 2.5rem 0 1rem 0; }
+        .experiences-grid, .awards-grid, .certificates-list { gap: 1rem; }
+        .exp-card, .award-card, .certificate-item { padding: 1rem; }
+        .certificate-item { font-size: 0.95rem; }
+      }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <!-- Seção 1: Foto e apresentação -->
+        <section class="about-section" data-aos="fade-up">
+            <div class="about-intro">
+                <img src="/public/favicon.jpg" alt="Marcos Vinicio" class="about-photo">
+                <h1 class="section-title" style="margin-bottom:1rem;">Quem sou eu</h1>
+                <p style="font-size:1.2rem;line-height:1.7;">Sou Marcos Vinicio, desenvolvedor de software apaixonado por tecnologia, inovação e criatividade. Atuo principalmente com desenvolvimento web e de jogos, criando soluções modernas, acessíveis e impactantes. Meu objetivo é transformar ideias em experiências digitais de alto nível, sempre buscando evolução contínua e excelência em cada projeto.</p>
+            </div>
+        </section>
+        <!-- Seção 2: Experiências (Cards estilo mohnishgopi.com) -->
+        <section class="about-section" data-aos="fade-up" data-aos-delay="100">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom:2.2rem;">Experiências Profissionais</h2>
+                <div class="experiences-grid">
+                  <div class="exp-card">
+                    <span class="exp-icon"><i class="fas fa-laptop-code"></i></span>
+                    <div class="exp-role">Desenvolvedor Web</div>
+                    <div class="exp-company">Freelancer</div>
+                    <div class="exp-period">2021 - Presente</div>
+                    <div class="exp-desc">Criação de sites institucionais, e-commerces e landing pages modernas para clientes diversos.</div>
+                  </div>
+                  <div class="exp-card">
+                    <span class="exp-icon"><i class="fas fa-gamepad"></i></span>
+                    <div class="exp-role">Desenvolvedor de Jogos</div>
+                    <div class="exp-company">Projetos Autorais & AfroGames</div>
+                    <div class="exp-period">2022 - Presente</div>
+                    <div class="exp-desc">Desenvolvimento de jogos 2D e 3D, incluindo títulos premiados em hackathons e eventos internacionais.</div>
+                  </div>
+                  <div class="exp-card">
+                    <span class="exp-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                    <div class="exp-role">Instrutor de Programação</div>
+                    <div class="exp-company">Code ONE</div>
+                    <div class="exp-period">2023 - Presente</div>
+                    <div class="exp-desc">Ensino de lógica de programação, web e jogos para iniciantes e jovens talentos.</div>
+                  </div>
+                  <div class="exp-card">
+                    <span class="exp-icon"><i class="fas fa-award"></i></span>
+                    <div class="exp-role">Participante (Equipe Premiada)</div>
+                    <div class="exp-company">NASA Space Apps Challenge</div>
+                    <div class="exp-period">2024</div>
+                    <div class="exp-desc">Reconhecido pela NASA com o prêmio de Melhor Solução Ambiental do RJ.</div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção 3: Prêmios & Conquistas -->
+        <section class="about-section" data-aos="fade-up" data-aos-delay="200">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom:2.2rem;">Prêmios & Conquistas</h2>
+                <div class="awards-grid">
+                  <div class="award-card">
+                    <div class="award-title">Melhor Solução Ambiental do RJ (NASA Space Apps 2024)</div>
+                    <div class="award-desc">Reconhecimento internacional por projeto ambiental inovador premiado pela NASA.</div>
+                  </div>
+                  <div class="award-card">
+                    <div class="award-title">Palestrante IMPA & AfroGames</div>
+                    <div class="award-desc">Convite para palestra "O Poder dos Jogos" no Festival Nacional da Matemática.</div>
+                  </div>
+                  <div class="award-card">
+                    <div class="award-title">Formação em Desenvolvimento de Jogos</div>
+                    <div class="award-desc">Conclusão do curso AfroGames com destaque em projetos de jogos digitais.</div>
+                  </div>
+                  <div class="award-card">
+                    <div class="award-title">Projetos e Hackathons</div>
+                    <div class="award-desc">Mais de 15 projetos entregues e 5+ reconhecimentos em eventos e hackathons.</div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção 4: Certificados -->
+        <section class="about-section" data-aos="fade-up" data-aos-delay="300">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom:2.2rem;">Certificados</h2>
+                <ul class="certificates-list">
+                  <li class="certificate-item">Desenvolvimento Web Moderno (HTML, CSS, JavaScript, React)</li>
+                  <li class="certificate-item">Unity Game Development</li>
+                  <li class="certificate-item">Python para Iniciantes</li>
+                  <li class="certificate-item">Certificação em C# e C++</li>
+                  <li class="certificate-item">Formação em Desenvolvimento de Jogos AfroGames</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/src/components/header.js"></script>
+    <script type="module">
+      import { loadFooter } from '/src/components/footer.js';
+      loadFooter(document.getElementById('footer-container'));
+      // Sincroniza o tema do footer com o tema global
+      const observer = new MutationObserver(() => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const footer = document.querySelector('.footer');
+        if (footer) {
+          footer.setAttribute('data-theme', theme);
+        }
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      // Inicializa o tema do footer
+      window.addEventListener('DOMContentLoaded', () => {
+        const theme = document.documentElement.getAttribute('data-theme');
+        const footer = document.querySelector('.footer');
+        if (footer) {
+          footer.setAttribute('data-theme', theme);
+        }
+      });
+    </script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+    </script>
+</body>
+</html>

@@ -19,7 +19,7 @@
     <section class="hero" data-aos="fade-up" data-aos-duration="1000">
         <div class="hero-content">
             <h1>Olá, eu sou <span class="highlight">Marcos Vinicio</span></h1>
-            <p class="subtitle">Sofware Developer</p>
+            <p class="subtitle">Software Developer</p>
             <div class="availability">
                 <span class="availability-text">Disponível para novos trabalhos</span>
                 <span class="availability-dot"></span>
@@ -29,32 +29,8 @@
                 <a href="#contato" class="btn secondary">Contato</a>
             </div>
         </div>
-        <div class="hero-code" data-aos="fade-left" data-aos-delay="300">
-            <div class="code-card">
-                <div class="code-header">
-                    <div class="code-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="code-title">developer.js</div>
-                </div>
-                <div class="code-content">
-                    <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-    <span class="property">name</span>: <span class="string">"Marcos Vinicio"</span>,
-    <span class="property">role</span>: <span class="string">"Sofware Developer"</span>,
-    <span class="property">skills</span>: {
-        <span class="property">frontend</span>: [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JavaScript"</span>, <span class="string">"React"</span>],
-        <span class="property">backend</span>: [<span class="string">"Node.js"</span>, <span class="string">"Python"</span>, <span class="string">"C#"</span>],
-        <span class="property">tools</span>: [<span class="string">"Git"</span>, <span class="string">"VS Code"</span>, <span class="string">"Unity"</span>]
-    },
-    <span class="property">status</span>: <span class="string">"Available for work"</span>,
-    <span class="property">motto</span>: <span class="string">"Building the future, one line at a time"</span>
-};
-
-<span class="comment">// Let's create something amazing together!</span></code></pre>
-                </div>
-            </div>
+        <div class="hero-mockups" data-aos="fade-left" data-aos-delay="300">
+            <img src="assets/mockups.png" alt="Mockups" class="hero-mockup-img" />
         </div>
     </section>
 
@@ -122,6 +98,9 @@
                     </div>
                 </div>
             </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="src/pages/about.html#" class="btn primary">Saiba mais sobre mim</a>
+            </div>
         </div>
     </section>
 
@@ -181,7 +160,7 @@
             <!-- Projetos serão carregados dinamicamente -->
         </div>
         <div class="projects-more" data-aos="fade-up" data-aos-delay="300">
-            <a href="https://marcosvinicio.itch.io" target="_blank" class="btn">Ver mais projetos</a>
+            <a href="src/pages/projects.html" class="btn primary">Ver mais</a>
         </div>
     </section>
 
@@ -226,6 +205,9 @@
                     </div>
                 </article>
             </div>
+            <div class="news-more" data-aos="fade-up" data-aos-delay="400" style="text-align:center; margin-top:2rem;">
+                <a href="src/pages/notices.html" class="btn primary">Ver mais postagens</a>
+            </div>
         </div>
     </section>
 
@@ -263,35 +245,6 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" data-aos="fade-up">
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Marcos Vinicio</h3>
-                <p>Sofware Developer</p>
-                <div class="footer-email">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:marcosvinicio.dev@gmail.com">marcosvinicio.dev@gmail.com</a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/#sobre">Sobre</a>
-                <a href="/#habilidades">Tecnologias</a>
-                <a href="/#projetos">Projetos</a>
-                <a href="/#contato">Contato</a>
-            </div>
-            <div class="footer-social">
-                <a href="https://wa.me/5521989144959" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/marcos.vinicio10" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/marcosvinicio10" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/marcosvinicio10" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Marcos Vinicio. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/src/components/header.js"></script>
     <script src="controllers/theme.js"></script>
@@ -299,6 +252,10 @@
     <script src="controllers/form.js"></script>
     <script src="controllers/animations.js"></script>
     <script src="controllers/projects.js"></script>
+    <script type="module">
+      import { loadFooter } from './src/components/footer.js';
+      loadFooter();
+    </script>
     <script>
         // Inicializa AOS
         AOS.init({
